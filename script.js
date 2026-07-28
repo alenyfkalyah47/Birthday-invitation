@@ -116,47 +116,62 @@ cards.forEach(card => {
 
 });
 
+
 // ===========================
-// Отправка анкеты гостя
+// Отправка формы RSVP
 // ===========================
 
-const guestForm = document.getElementById("guestForm");
+const form = document.getElementById("rsvpForm");
 
-if (guestForm) {
-
-    guestForm.addEventListener("submit", async (e) => {
-
+if (form) {
+    form.addEventListener("submit", async function (e) {
         e.preventDefault();
 
-        const formData = new FormData(guestForm);
+        const drinks = [];
+
+        document
+            .querySelectorAll(".drinks input[type='checkbox']:checked")
+            .forEach(item => drinks.push(item.value));
 
         const data = {
-            name: formData.get("name"),
-            attendance: formData.get("attendance"),
-            guests: formData.get("guests"),
-            drinks: formData.get("drinks"),
-            comment: formData.get("comment")
+            name: document.getElementById("name").value,
+            attend: document.getElementById("attend").value,
+            count: document.getElementById("count").value,
+            drinks: drinks,
+            comment: document.getElementById("comment").value
         };
 
         try {
+            const response = await fetch(
+                "https://birthday-bot-7qkq.onrender.com/submit",
+                {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify(data)
+                }
+            );
 
-            await fetch("ВАШ_АДРЕС_СЕРВЕРА", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json"
-                },
-                body: JSON.stringify(data)
-            });
+            const result = await response.json();
 
-            alert("Спасибо! Ваш ответ отправлен ❤️");
-            guestForm.reset();
+            if (result.success) {
+
+                document.getElementById("successMessage").style.display = "block";
+
+                form.reset();
+
+            } else {
+
+                alert("Не удалось отправить ответ.");
+
+            }
 
         } catch (error) {
 
-            alert("Ошибка отправки. Попробуйте ещё раз.");
+            alert("Ошибка соединения с сервером.");
 
         }
 
     });
-
 }
