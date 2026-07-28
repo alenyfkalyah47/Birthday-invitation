@@ -131,19 +131,32 @@
 Пожалуйста, подтвердите свое присутствие.
 </p>
 
-<a class="telegram" href="https://t.me/Birthday2027Bot">
-Подтвердить присутствие
-</a>
+<form class="guest-form" id="guestForm">
+
+<input type="text" name="name" placeholder="Ваше имя и фамилия" required>
+
+<select name="attendance" required>
+<option value="">Будете присутствовать?</option>
+<option value="Да, буду">Да, буду</option>
+<option value="К сожалению, не смогу">К сожалению, не смогу</option>
+</select>
+
+<input type="number" name="guests" placeholder="Количество гостей" min="1">
+
+<select name="drinks">
+<option value="">Какие напитки предпочитаете?</option>
+<option value="Вино">🍷 Вино</option>
+<option value="Шампанское">🥂 Шампанское</option>
+<option value="Крепкие напитки">🥃 Крепкие напитки</option>
+<option value="Безалкогольные">🧃 Безалкогольные</option>
+</select>
+
+<textarea name="comment" placeholder="Ваши пожелания"></textarea>
+
+<button type="submit" class="telegram">
+Отправить ответ
+</button>
+
+</form>
 
 </section>
-
-
-<footer>
-До скорой встречи ✨
-</footer>
-
-
-<script src="script.js"></script>
-
-</body>
-</html>
