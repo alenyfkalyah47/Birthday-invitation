@@ -317,3 +317,80 @@ transform:scale(1.08);
 }
 
 }
+
+/* ===== RSVP Форма ===== */
+
+#rsvpForm{
+    max-width:700px;
+    margin:40px auto 0;
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+}
+
+#rsvpForm input,
+#rsvpForm select,
+#rsvpForm textarea{
+    width:100%;
+    padding:18px;
+    border:1px solid rgba(255,255,255,.15);
+    border-radius:16px;
+    background:#1a1a1a;
+    color:#fff;
+    font-size:17px;
+    font-family:'Montserrat',sans-serif;
+    outline:none;
+    transition:.3s;
+}
+
+#rsvpForm input:focus,
+#rsvpForm select:focus,
+#rsvpForm textarea:focus{
+    border-color:#b11b37;
+    box-shadow:0 0 15px rgba(177,27,55,.3);
+}
+
+#rsvpForm textarea{
+    min-height:130px;
+    resize:vertical;
+}
+
+#rsvpForm label{
+    font-size:18px;
+    margin-top:10px;
+}
+
+.drinks{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:12px;
+    margin-bottom:10px;
+}
+
+.drinks label{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    background:#1a1a1a;
+    padding:14px 16px;
+    border-radius:12px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.drinks label:hover{
+    background:#252525;
+}
+
+.drinks input[type="checkbox"]{
+    width:20px;
+    height:20px;
+    accent-color:#b11b37;
+}
+
+#successMessage{
+    text-align:center;
+    font-size:22px;
+    color:#d9b36b;
+    margin-top:25px;
+}
