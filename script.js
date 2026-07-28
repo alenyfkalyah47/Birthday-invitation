@@ -115,3 +115,48 @@ cards.forEach(card => {
     });
 
 });
+
+// ===========================
+// Отправка анкеты гостя
+// ===========================
+
+const guestForm = document.getElementById("guestForm");
+
+if (guestForm) {
+
+    guestForm.addEventListener("submit", async (e) => {
+
+        e.preventDefault();
+
+        const formData = new FormData(guestForm);
+
+        const data = {
+            name: formData.get("name"),
+            attendance: formData.get("attendance"),
+            guests: formData.get("guests"),
+            drinks: formData.get("drinks"),
+            comment: formData.get("comment")
+        };
+
+        try {
+
+            await fetch("ВАШ_АДРЕС_СЕРВЕРА", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(data)
+            });
+
+            alert("Спасибо! Ваш ответ отправлен ❤️");
+            guestForm.reset();
+
+        } catch (error) {
+
+            alert("Ошибка отправки. Попробуйте ещё раз.");
+
+        }
+
+    });
+
+}
