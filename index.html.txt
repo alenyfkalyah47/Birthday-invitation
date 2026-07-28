@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>It's My Birthday</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="overlay"></div>
+
+<section class="hero">
+
+    <img src="images/photo.jpg" class="hero-photo">
+
+    <div class="hero-content">
+
+        <h3>IT'S MY</h3>
+
+        <h1>BIRTHDAY</h1>
+
+        <p>
+            Буду счастлива разделить этот праздник вместе с вами
+        </p>
+
+        <a href="#invite" class="button">
+            Открыть приглашение
+        </a>
+
+    </div>
+
+</section>
+
+<section id="invite" class="invite">
+
+<div class="container">
+
+<h2>50 ЛЕТ</h2>
+
+<div class="line"></div>
+
+<div class="info">
+
+<div class="card">
+
+<h4>Дата</h4>
+
+<p>28 августа 2026</p>
+
+</div>
+
+<div class="card">
+
+<h4>Время</h4>
+
+<p>18:00</p>
+
+</div>
+
+<div class="card">
+
+<h4>Место</h4>
+
+<p>Ресторан VESNA</p>
+
+</div>
+
+<div class="card">
+
+<h4>Адрес</h4>
+
+<p>с. Теренколь</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="dress">
+
+<h2>Dress Code</h2>
+
+<div class="dress-wrapper">
+
+<div class="dress-item">
+
+<div class="circle black"></div>
+
+<p>Черный</p>
+
+</div>
+
+<div class="dress-item">
+
+<div class="circle white"></div>
+
+<p>Белый</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="timer">
+
+<h2>До встречи осталось</h2>
+
+<div id="countdown">
+
+<div class="time">
+
+<span id="days">00</span>
+
+<p>Дней</p>
+
+</div>
+
+<div class="time">
+
+<span id="hours">00</span>
+
+<p>Часов</p>
+
+</div>
+
+<div class="time">
+
+<span id="minutes">00</span>
+
+<p>Минут</p>
+
+</div>
+
+<div class="time">
+
+<span id="seconds">00</span>
+
+<p>Секунд</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="rsvp">
+
+<h2>Буду рада видеть вас ❤️</h2>
+
+<p>
+Пожалуйста, подтвердите свое присутствие.
+</p>
+
+<a class="telegram"
+
+href="https://t.me/Birthday2027Bot">
+
+Подтвердить присутствие
+
+</a>
+
+</section>
+
+<footer>
+
+До скорой встречи ✨
+
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
