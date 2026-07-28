@@ -127,36 +127,63 @@
 
 <h2>Буду рада видеть вас ❤️</h2>
 
-<p>
-Пожалуйста, подтвердите свое присутствие.
-</p>
+<p>Пожалуйста, подтвердите свое присутствие.</p>
 
-<form class="guest-form" id="guestForm">
+<form id="rsvpForm">
 
-<input type="text" name="name" placeholder="Ваше имя и фамилия" required>
+<input
+type="text"
+id="name"
+placeholder="Ваше имя и фамилия"
+required>
 
-<select name="attendance" required>
+<select id="attend" required>
 <option value="">Будете присутствовать?</option>
-<option value="Да, буду">Да, буду</option>
-<option value="К сожалению, не смогу">К сожалению, не смогу</option>
+<option value="Да">✅ Да</option>
+<option value="Нет">❌ Нет</option>
 </select>
 
-<input type="number" name="guests" placeholder="Количество гостей" min="1">
+<input
+type="number"
+id="count"
+placeholder="Количество гостей"
+min="1"
+value="1">
 
-<select name="drinks">
-<option value="">Какие напитки предпочитаете?</option>
-<option value="Вино">🍷 Вино</option>
-<option value="Шампанское">🥂 Шампанское</option>
-<option value="Крепкие напитки">🥃 Крепкие напитки</option>
-<option value="Безалкогольные">🧃 Безалкогольные</option>
-</select>
+<label>Какие напитки вы предпочитаете?</label>
 
-<textarea name="comment" placeholder="Ваши пожелания"></textarea>
+<div class="drinks">
 
-<button type="submit" class="telegram">
-Отправить ответ
+<label><input type="checkbox" value="Шампанское"> 🥂 Шампанское</label>
+
+<label><input type="checkbox" value="Красное вино"> 🍷 Красное вино</label>
+
+<label><input type="checkbox" value="Белое вино"> 🥂 Белое вино</label>
+
+<label><input type="checkbox" value="Коньяк"> 🥃 Коньяк</label>
+
+<label><input type="checkbox" value="Водка"> 🍸 Водка</label>
+
+<label><input type="checkbox" value="Самогон"> 🥃 Самогон</label>
+
+<label><input type="checkbox" value="Безалкогольные напитки"> 🧃 Безалкогольные напитки</label>
+
+</div>
+  
+<textarea
+id="comment"
+placeholder="Пожелания или комментарий"></textarea>
+
+<button
+type="submit"
+class="telegram">
+Подтвердить присутствие
 </button>
 
 </form>
+
+<p id="successMessage" style="display:none;margin-top:20px;">
+❤️ Спасибо! Ваш ответ успешно отправлен.
+</p>
 
 </section>
