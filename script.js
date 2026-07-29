@@ -190,10 +190,10 @@ function createPetal(){
 
     petal.style.left = Math.random()*100 + "vw";
 
-    const size = 12 + Math.random()*22;
+    const size = 35 + Math.random()*35;
 
-    petal.style.width = size + "px";
-    petal.style.height = size*1.4 + "px";
+petal.style.width = size + "px";
+petal.style.height = size*1.4 + "px";
 
     petal.style.opacity = 0.45 + Math.random()*0.55;
 
