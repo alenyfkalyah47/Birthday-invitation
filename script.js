@@ -184,19 +184,26 @@ const petals = document.getElementById("petals");
 function createPetal(){
 
     const petal = document.createElement("div");
+
     petal.className = "petal";
 
-    petal.style.left = Math.random() * window.innerWidth + "px";
-    petal.style.animationDuration = 6 + Math.random() * 8 + "s";
-    petal.style.opacity = 0.4 + Math.random() * 0.6;
-    petal.style.transform =
-        `rotate(${Math.random()*360}deg)`;
+    petal.style.left = Math.random()*100 + "vw";
+
+    const size = 12 + Math.random()*22;
+
+    petal.style.width = size + "px";
+    petal.style.height = size*1.4 + "px";
+
+    petal.style.opacity = 0.45 + Math.random()*0.55;
+
+    petal.style.animation =
+        `fall ${7 + Math.random()*7}s linear forwards`;
 
     petals.appendChild(petal);
 
     setTimeout(()=>{
         petal.remove();
-    },14000);
+    },15000);
 
 }
 
