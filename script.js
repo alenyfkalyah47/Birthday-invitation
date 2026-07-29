@@ -134,12 +134,13 @@ if (form) {
             .forEach(item => drinks.push(item.value));
 
         const data = {
-            name: document.getElementById("name").value,
-            attend: document.getElementById("attend").value,
-            count: document.getElementById("count").value,
-            drinks: drinks,
-            comment: document.getElementById("comment").value
-        };
+    name: document.getElementById("name").value,
+    attend: document.getElementById("attend").value,
+    count: document.getElementById("count").value,
+    drinks: drinks,
+    otherDrink: document.getElementById("otherDrink").value,
+    comment: document.getElementById("comment").value
+};
 
         try {
             const response = await fetch(
