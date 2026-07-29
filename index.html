@@ -200,5 +200,27 @@ class="telegram">
 
 <script src="script.js"></script>
 
+<audio id="bgMusic" loop autoplay>
+  <source src="music.mp3" type="audio/mpeg">
+  Ваш браузер не поддерживает аудио.
+</audio>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const music = document.getElementById("bgMusic");
+
+  const startMusic = () => {
+    music.play().catch(() => {});
+    document.removeEventListener("click", startMusic);
+    document.removeEventListener("touchstart", startMusic);
+  };
+
+  music.play().catch(() => {
+    document.addEventListener("click", startMusic);
+    document.addEventListener("touchstart", startMusic);
+  });
+});
+</script>
+  
 </body>
 </html>
