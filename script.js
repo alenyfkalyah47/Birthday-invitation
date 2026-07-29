@@ -208,4 +208,4 @@ petal.style.height = size*1.4 + "px";
 
 }
 
-setInterval(createPetal,350);
+setInterval(createPetal,500);
