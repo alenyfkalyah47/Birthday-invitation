@@ -392,3 +392,42 @@ transform:scale(1.08);
     color:#d9b36b;
     margin-top:25px;
 }
+#musicOverlay{
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity .6s;
+}
+
+#musicOverlay.hide{
+    opacity: 0;
+    pointer-events: none;
+}
+
+#startMusic{
+    background: linear-gradient(135deg,#8b0000,#d62828);
+    color:#fff;
+    border:none;
+    border-radius:20px;
+    padding:22px 34px;
+    font-size:24px;
+    font-family:'Montserrat',sans-serif;
+    cursor:pointer;
+    box-shadow:0 15px 35px rgba(0,0,0,.35);
+    transition:.3s;
+}
+
+#startMusic:hover{
+    transform:scale(1.05);
+}
+
+#startMusic span{
+    display:block;
+    margin-top:8px;
+    font-size:18px;
+    font-weight:500;
+}
