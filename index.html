@@ -224,15 +224,15 @@ class="telegram">
 const music = document.getElementById("bgMusic");
 const overlay = document.getElementById("musicOverlay");
 const button = document.getElementById("startMusic");
+<script>
+const music = document.getElementById("bgMusic");
+const overlay = document.getElementById("musicOverlay");
+const button = document.getElementById("startMusic");
 
-button.addEventListener("click", async () => {
-    try {
-        await music.play();
-        overlay.classList.add("hide");
-    } catch (err) {
-        console.error("Ошибка воспроизведения:", err);
-        alert("Музыка не запускается. Проверьте файл music.mp3.");
-    }
+button.addEventListener("click", () => {
+    alert("Кнопка работает!");
+    overlay.classList.add("hide");
+    music.play();
 });
 </script>
   
