@@ -223,9 +223,9 @@ class="telegram">
 <script>
 const music = document.getElementById("bgMusic");
 const overlay = document.getElementById("musicOverlay");
-const button = document.getElementById("startMusic");
+const startMusic = document.getElementById("startMusic");
 
-button.addEventListener("click", () => {
+startMusic.addEventListener("click", () => {
     alert("Кнопка работает!");
     overlay.classList.add("hide");
     music.play();
