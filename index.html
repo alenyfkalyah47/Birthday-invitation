@@ -16,6 +16,13 @@
 
 <body>
 
+<div id="musicOverlay">
+  <button id="startMusic">
+    🎶<br>
+    <span>Нажми, чтобы создать настроение</span>
+  </button>
+</div>
+  
 <div class="overlay"></div>
 
 <section class="hero">
@@ -208,25 +215,19 @@ class="telegram">
 
 <script src="script.js"></script>
 
-<audio id="bgMusic" loop autoplay>
+<audio id="bgMusic" loop>
   <source src="music.mp3" type="audio/mpeg">
   Ваш браузер не поддерживает аудио.
 </audio>
 
 <script>
-document.addEventListener("DOMContentLoaded", () => {
-  const music = document.getElementById("bgMusic");
+const music = document.getElementById("bgMusic");
+const overlay = document.getElementById("musicOverlay");
+const button = document.getElementById("startMusic");
 
-  const startMusic = () => {
-    music.play().catch(() => {});
-    document.removeEventListener("click", startMusic);
-    document.removeEventListener("touchstart", startMusic);
-  };
-
-  music.play().catch(() => {
-    document.addEventListener("click", startMusic);
-    document.addEventListener("touchstart", startMusic);
-  });
+button.addEventListener("click", () => {
+    music.play();
+    overlay.classList.add("hide");
 });
 </script>
   
