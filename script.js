@@ -176,3 +176,28 @@ if (form) {
 
     });
 }
+
+// Падающие лепестки
+
+const petals = document.getElementById("petals");
+
+function createPetal(){
+
+    const petal = document.createElement("div");
+    petal.className = "petal";
+
+    petal.style.left = Math.random() * window.innerWidth + "px";
+    petal.style.animationDuration = 6 + Math.random() * 8 + "s";
+    petal.style.opacity = 0.4 + Math.random() * 0.6;
+    petal.style.transform =
+        `rotate(${Math.random()*360}deg)`;
+
+    petals.appendChild(petal);
+
+    setTimeout(()=>{
+        petal.remove();
+    },14000);
+
+}
+
+setInterval(createPetal,350);
