@@ -328,7 +328,7 @@ transform:scale(1.08);
     gap:18px;
 }
 
-#rsvpForm input,
+#rsvpForm input:not([type="checkbox"]),
 #rsvpForm select,
 #rsvpForm textarea{
     width:100%;
@@ -385,6 +385,9 @@ transform:scale(1.08);
 .drinks input[type="checkbox"]{
     width:20px;
     height:20px;
+    min-width:20px;
+    margin:0;
+    flex-shrink:0;
     accent-color:#b11b37;
 }
 
