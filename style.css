@@ -431,3 +431,33 @@ transform:scale(1.08);
     font-size:18px;
     font-weight:500;
 }
+
+/* Лепестки */
+
+#petals{
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    overflow:hidden;
+    z-index:2;
+}
+
+.petal{
+    position:absolute;
+    top:-40px;
+    width:18px;
+    height:24px;
+    background:linear-gradient(180deg,#ff4d5a,#8b0000);
+    border-radius:70% 0 70% 0;
+    opacity:.8;
+    animation:fall linear forwards;
+}
+
+@keyframes fall{
+    from{
+        transform:translateY(-50px) rotate(0deg);
+    }
+    to{
+        transform:translateY(110vh) rotate(720deg);
+    }
+}
