@@ -445,15 +445,15 @@ transform:scale(1.08);
 .petal{
     position:fixed;
     top:-60px;
-    width:22px;
-    height:30px;
-    background:linear-gradient(145deg,#ff3b4f,#b3001b);
-    border-radius:70% 0 70% 70%;
+    width:45px;
+    height:45px;
+    background-image:url("petal.png");
+    background-size:contain;
+    background-repeat:no-repeat;
+    background-position:center;
     opacity:.9;
     pointer-events:none;
-    box-shadow:
-        inset -2px -2px 4px rgba(0,0,0,.25),
-        0 2px 8px rgba(0,0,0,.25);
+    filter:drop-shadow(0 3px 5px rgba(0,0,0,.3));
 }
 
 @keyframes fall{
