@@ -180,6 +180,7 @@ if (form) {
 // Падающие лепестки
 
 const petals = document.getElementById("petals");
+console.log("Лепестки:", petals);
 
 function createPetal(){
 
